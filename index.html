@@ -1,0 +1,69 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+    <style>
+      * {
+          color:#7F7F7F;
+          font-family:Arial,sans-serif;
+          font-size:12px;
+          font-weight:normal;
+      }    
+      input{
+        margin:30px;
+      }
+    </style>
+    
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="jquery-barcode.js"></script>
+    <script type="text/javascript" src="jquery-qrcode.js"></script>
+    <script type="text/javascript" src="bar-qr-code.js"></script>
+    
+  </head>
+  <body>
+    <div id="barcode" class="barcode" style="margin: 50px auto"></div>
+    <div id="QRcode"></div>
+    <input type="text" name="">
+  </body>
+  <script>
+    /*
+        generateBarcode(div_id，code_str, code_type, bgcolor, color, strip_width, bar_height);
+
+        生成一维码参数注释：
+
+        div_id        : 用来绑定某个div
+        code_str      : 需要编辑成一维码的值，例如：12345670
+        code_type     : 一维码的编码类型，包括：code39,code128
+        bgcolor       : 一维码的背景颜色，一般为白色#FFFFFF
+        color         : 一维码字体颜色，一般为黑色#000000
+        strip_width   : 每一个小条形的宽度，一般为1
+        bar_height    : 条形码的高度 一般为50
+        
+    */
+    //generateBarcode("barcode", "12345678", "code39", "#FFFFFF", "#000000", "1", "50");
+    
+    /*
+        generate2Dcode(div_id, code_str, bgcolor, color, strip_width, bar_height);
+
+        生成二维码参数注释:
+        
+        div_id        : 用来绑定某个div
+        code_str      : 需要编辑成二维码的值，例如：12345670
+        bgcolor       : 背景色
+        color         : 前景色
+        strip_width   : 二维码宽度
+        bar_height    : 二维码高度
+        
+    */
+   // generateQRcode("QRcode", "www.baidu.com", "#FFFFFF", "#000000", "256", "256");
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //一维码生成函数调用
+      generateBarcode("barcode", "12345678", "code39", "#FFFFFF", "#000000", "1", "50");
+      //二维码生成函数调用
+      generateQRcode("QRcode", "https://10.3.131.164/cas/static/apk/app-release.apk", "#FFFFFF", "#5D6178", "200", "200");
+    });
+  </script>
+</html>
+
+generateQRcode('QRcode', 'https://10.3.131.164/cas/static/apk/app-release.apk', '#FFFFFF', '#5D6178', '200', '200');
