@@ -33,4 +33,4 @@ js generate QRcode
 - strip_width: 二维码宽度
 - bar_height: 二维码高度
 
-例如：·generateQRcode("", "www.baidu.com", "#FFFFFF", "#000000", "256", "256");·
+例如：·generateQRcode("", "maxiaobo.top", "#FFFFFF", "#000000", "256", "256");·
