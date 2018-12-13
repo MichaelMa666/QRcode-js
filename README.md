@@ -4,6 +4,7 @@ js generate QRcode
 1.body标签里面在适当的位置设置一个div来容纳即将生成的一维码。 例如：`<div id="barcode"></div>`
 
 2.在脚本里面调用函数generateBarcode()
+
 `generateBarcode( div_id, code_str, code_type, bgcolor, color, strip_width, bar_height);`
 
 ### 参数说明
